@@ -19,13 +19,14 @@ export const longestString = (arr) => {
   var cpt = 0;
   
   for(let i=0;i<arr.length;i++){
-    if(arr[i].length > size){
+    if(typeof arr[i] === 'string' && arr[i].length > size){
 	  id = i;
 	  size = arr[i].length;
 	}
   }
   
-  return id;
+  return arr[id]
+  ;
 };
 
 export const reverseString = (str) => {

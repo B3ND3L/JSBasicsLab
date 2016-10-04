@@ -8,7 +8,13 @@ export const isNumberEven = (i) => {
 export const getFileExtension = (str) => {
   // str will be a string, but it may not have a file extension.
   // Return the file extension (with no period) if it has one, otherwise false
-	
+  
+  var arr = [];
+  arr = str.split['.'];
+  
+  var ext = arr[arr.length-1];
+    
+  return ext;
 };
 
 export const longestString = (arr) => {
@@ -24,21 +30,32 @@ export const longestString = (arr) => {
 	  size = arr[i].length;
 	}
   }
-  
-  return arr[id]
-  ;
+  return arr[id];
 };
 
 export const reverseString = (str) => {
   // str will be an string
   // Return a new string who's characters are in the opposite order to str's.
+  var reverse = '';
   
+   for(let i=str.length-1; i >=0; i--){
+	   reverse += str[i];
+   }
+  
+  return reverse;
 };
 
 export const isPalindrome = (str) => {
   // str will be an string
   // Return true if it is a palindrome and false otherwise.
   // It should be case insensitive and not consider space or punctuation.
+   for(let i=0;i<str.length/2;i++){
+	   if(str[i] !== str[str.length-i-1]){
+		   return false;
+	   }
+   }
+   return true;
+   
 };
 
 export const nestedSum = (arr) => {

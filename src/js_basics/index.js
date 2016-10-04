@@ -2,21 +2,36 @@
 export const isNumberEven = (i) => {
   // i will be an integer.
   // Return true if it's even, and false if it isn't.
+	return (i%2===0);
 };
 
 export const getFileExtension = (str) => {
   // str will be a string, but it may not have a file extension.
   // Return the file extension (with no period) if it has one, otherwise false
+	
 };
 
 export const longestString = (arr) => {
   // arr will be an array.
   // Return the longest string in the array
+  var size = 0;
+  var id = 0;
+  var cpt = 0;
+  
+  for(let i=0;i<arr.length;i++){
+    if(arr[i].length > size){
+	  id = i;
+	  size = arr[i].length;
+	}
+  }
+  
+  return id;
 };
 
 export const reverseString = (str) => {
   // str will be an string
   // Return a new string who's characters are in the opposite order to str's.
+  
 };
 
 export const isPalindrome = (str) => {

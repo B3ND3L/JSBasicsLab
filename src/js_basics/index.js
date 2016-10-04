@@ -9,12 +9,8 @@ export const getFileExtension = (str) => {
   // str will be a string, but it may not have a file extension.
   // Return the file extension (with no period) if it has one, otherwise false
   
-  var arr = [];
-  arr = str.split['.'];
-  
-  var ext = arr[arr.length-1];
-    
-  return ext;
+  var arr = str.split('.');
+  return (arr.length>1)?arr[arr.length-1]:false;
 };
 
 export const longestString = (arr) => {
@@ -49,6 +45,7 @@ export const isPalindrome = (str) => {
   // str will be an string
   // Return true if it is a palindrome and false otherwise.
   // It should be case insensitive and not consider space or punctuation.
+   str = str.toLowerCase();
    for(let i=0;i<str.length/2;i++){
 	   if(str[i] !== str[str.length-i-1]){
 		   return false;

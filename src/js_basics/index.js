@@ -46,16 +46,13 @@ export const isPalindrome = (str) => {
   // Return true if it is a palindrome and false otherwise.
   // It should be case insensitive and not consider space or punctuation.
    str = str.toLowerCase();
-   for(let i=0;i<str.length/2;i++){
-	   if(str[i] !== str[str.length-i-1]){
-		   return false;
-	   }
-   }
-   return true;
-   
+   return str === reverseString(str);   
 };
 
 export const nestedSum = (arr) => {
   // arr will be an array, containing integers, strings and/or arrays like itself
   // Return the sum all the numbers you find, anywhere in the nest of arrays.
+  for(let x of arr){
+	  
+  }
 };
